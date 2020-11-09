@@ -1,2 +1,2 @@
 # xtls-nginx
-xtls一键部署
+xtls docker-compose一键部署
