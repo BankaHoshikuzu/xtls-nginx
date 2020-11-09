@@ -1,2 +1,2 @@
 # xtls-nginx
-v2ray xtls docker-compose
+docker-compose で v2ray-xtls サーバーを構築
