@@ -1,2 +1,2 @@
 # xtls-nginx
-xtls docker-compose一键部署
+v2ray xtls docker-compose
