@@ -1,15 +1,15 @@
 #!/bin/bash
 stty erase ^h
 echo -e "\033[32mChecking Environment... \033[0m"
-CURLSTATUS=$(curl -V | grep "command not found")
-DCSTATUS=$(docker-compose -v | grep "command not found")
-if [[ -n "$CURLSTATUS" ]]
+CURLSTATUS=$(curl -V | grep "Release-Date")
+DCSTATUS=$(docker-compose -v | grep "version")
+if [ "$CURLSTATUS" = "" ]
 then
     echo -e "\033[31mcURL Not Found. \033[0m"
     echo -e "\033[32mInstalling cURL... \033[0m"
     apt update && apt install curl -y
 fi 
-if [[ -n "$DCSTATUS" ]]
+if [ "$DCSTATUS" = "" ]
 then
     echo -e "\033[31mDocker-Compose Not Found. \033[0m"
     echo -e "\033[32mInstalling Docker-Compose... \033[0m"
